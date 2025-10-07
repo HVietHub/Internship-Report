@@ -6,104 +6,106 @@ chapter: false
 pre: " <b> 3.1. </b> "
 ---
 
-# Enabling Customers to Deliver Production-Ready AI Agents at Scale
+# Apex Legends Migrates to Amazon GameLift in Just 10 Days
 
-*By Swami Sivasubramanian, July 16, 2025 – Amazon Bedrock, Amazon Connect, Amazon Nova, Amazon Q, Amazon S3, AWS Inferentia, AWS Trainium, AWS Transform, Featured, Thought Leadership*
-
----
-
-## The Vision for AI Agents
-
-AI agents will fundamentally change how we work and live. AWS CEO Matt Garman described this shift as transformative as the birth of the internet.  
-
-**Intelligent agent systems** are already solving complex problems, automating workflows, and unlocking new possibilities:  
-- **AstraZeneca**: accelerated healthcare insights  
-- **Yahoo Finance**: transformed financial research for millions of investors  
-- **Syngenta**: revolutionized agriculture with AI-driven precision farming  
-
-To expand beyond early successes, organizations need a **practical approach** to manage the inherent complexity of agentic systems. AWS is committed to being the best place to build the world’s most useful AI agents — secure, reliable, and scalable.  
+Respawn Entertainment recently migrated **Apex Legends** to **Amazon GameLift** servers, completing the traffic cutover in just **10 days** with no visible downtime to players.  
+A key priority for Respawn was to perform technical integration and validation without disrupting development teams or player experience. AWS met that requirement by partnering with **Code Wizards Group** and leveraging the Amazon GameLift Migration Acceleration Program to build a staged, low-risk migration plan — resulting in one of the largest AWS-led infrastructure transitions ever undertaken for a live service game.
 
 ---
 
-## Guiding Principles
+## Defining Priorities
 
-From years of experience helping customers accelerate AI adoption, AWS distilled **four principles** for building AI agents at scale:
+As a live service game, Apex Legends continually evolves — not only in gameplay and content but also in operational quality. With millions of players worldwide, Respawn needed infrastructure that is **observable**, **consistent**, and **flexible**. When evaluating modern hosting options with AWS and Amazon GameLift, they identified three clear goals:
 
-### **Principle 1: Agility as a Competitive Edge**
-- Future success belongs to organizations that **adapt quickly**.  
-- Agent systems must have **flexible, open architectures**, easy to integrate with proprietary data and tools.  
-- AWS introduced **Amazon Bedrock AgentCore**:  
-  - Secure, serverless runtime with session isolation  
-  - Longest-running workloads with full trust controls  
-  - Integrates with open-source frameworks (CrewAI, LangGraph, LlamaIndex, Strands Agents)  
-  - Works with any foundation model (inside or outside Bedrock)  
+1. **Expand Player Experience**  
+   Infrastructure must scale to meet player demand spikes during new seasons or events.
 
- **AgentCore helps enterprises move beyond experiments to production-grade AI systems.**
+2. **Modernize Hosting**  
+   Migrate from hybrid infrastructure with bare metal servers to cloud-based hosting to support a global player base with scalable environments.
 
----
+3. **Maintain Development Velocity**  
+   The new solution must integrate smoothly with Respawn’s existing processes — build, test, deploy — without slowing game development.
 
-### **Principle 2: Evolving Fundamentals for the Agentic Era**
-The basics of enterprise technology remain, but their implementation must evolve:
-
-- **Security & Trust**: session isolation, transparency, guardrails, memory security  
-- **Reliability & Scalability**: checkpointing, graceful recovery, auto-scaling from 0 → thousands of sessions  
-- **Identity & Access**: fine-grained, temporary permissions; integrates with Cognito, Okta, Microsoft Entra ID, GitHub, Google, Salesforce, Slack  
-- **Observability**: real-time dashboards, OpenTelemetry integration, continuous monitoring  
-- **Data**: AgentCore Gateway connects proprietary sources (Knowledge Bases, APIs) into agent-compatible tools  
-- **Seamless Integration**: transforms APIs into tools with minimal code; supports MCP & A2A for multi-agent coordination  
-- **Tooling & Memory**: AgentCore Memory supports short- & long-term memory; built-in tools include Browser (web interaction) and Code Interpreter (safe code execution)  
-
- These fundamentals enable **secure, reliable, and scalable agent architectures**.
+> “Minimizing the disruption for our player population was a critical success factor for the migration. The coordinated effort between Respawn and the Amazon GameLift Servers team made this a reality.”  
+> — Robert LaCruise, Principal Engineer, Online Game Services, Apex Legends  
 
 ---
 
-### **Principle 3: Superior Outcomes with Model Choice & Data**
-- Applications have different requirements → no single model is best.  
-- AWS pioneered **model choice** with Amazon Bedrock (2023).  
-- New **Amazon Nova + SageMaker AI customization**:  
-  - Full lifecycle customization (PEFT, fine-tuning, SFT, DPO, PPO, CPT, Knowledge Distillation)  
-  - Deploy customized Nova models directly to Bedrock  
-- **Nova Act**: a browser-action model with SDK for automation agents  
-- **Amazon S3 Vectors**: first object store with native vector support  
-  - Cuts vector storage cost by 90%  
-  - Sub-second query performance  
-  - Integrates with Bedrock Knowledge Bases & OpenSearch  
+## Planning the Migration
 
- Combining the **right model + proprietary data** creates **domain-specific, high-performance AI agents**.
+To ensure Amazon GameLift met these needs, Respawn collaborated with AWS and Code Wizards Group — a long-standing industry partner — to conduct a detailed evaluation. Amazon GameLift already powers leading titles such as *Dead by Daylight*, *Mortal Kombat 1*, and *Marvel SNAP*, and can scale to **100 million concurrent players**.  
 
----
+Together, the teams identified three technical proofs of concept:
 
-### **Principle 4: Deploy Solutions that Transform Experiences**
-- AI agents reshape workflows and human productivity, not just infrastructure.  
-- AWS accelerates adoption with **pre-built solutions**:  
-  - **AWS Marketplace**: curated agents and tools from partners  
-  - **Kiro**: AI IDE for spec-driven development (prompts → code, tests, docs)  
-  - **AWS Transform**: agents for code modernization (refactoring, dependency mapping)  
-  - **Amazon Connect**: AI-driven customer experience across all channels  
+1. **Main Flow**: Ensure matchmaking and server placement run smoothly for all players  
+2. **Zero Downtime Updates**: Ability to push updates without disrupting player sessions  
+3. **Metrics & Observability**: Collect real-time data to monitor and improve player experience  
 
- From **experiments** to **full AI strategies**, AWS provides building blocks and ready-to-deploy agents.  
+> “We believe their (AWS) services offer the best overall player facing performance when compared to other alternatives. Additionally, AWS servers are standard for many other FPS titles and we believe our players will see the benefits of this migration globally.”  
+> — Robert LaCruise, Principal Engineer, Online Game Services, Apex Legends  
 
 ---
 
-## The Path Forward
+## Proof-of-Concept Implementation
 
-- AWS is **doubling its investment** with an additional **$100M in the Generative AI Innovation Center**.  
-- Supported organizations like NFL, Yahoo Finance, BMW, AstraZeneca → millions in productivity gains.  
-- AWS applies the same **security, reliability, and privacy standards** that defined cloud computing.  
+To validate the migration strategy, the teams built and tested several new components.
 
- **Key advice: start now.**  
-Don’t wait for perfect plans. Choose a meaningful business problem, build an agent, learn, and iterate.  
+### Seamless Matchmaking
+
+The first step was creating a **player redirect layer** to route players to Amazon GameLift servers without modifying backend logic, avoiding risky code changes or lengthy QA cycles. At the same time, a **Game Server Wrapper** was built to use the current game server build unchanged while adding logging and observability. Both components, developed by Code Wizards Group, were key to a smooth migration:
+
+> “We knew that player experience was super important to Respawn and their players. We created the Wrapper and Portal to enable this. The end result was no downtime to the player experience.”  
+> — Stuart Muckley, CEO & Founder, Code Wizards Group  
+
+### Zero Downtime Updates
+
+Code Wizards also developed a system to automatically move players to updated servers after matches — enabling new builds to be deployed without interrupting live gameplay:
+
+> “Player-facing goals were formalized into our architecture designs… ensuring that zero downtime deployments were a reality from start to finish.”  
+> — Jared Cugno, Head of Engineering, Apex Legends  
+
+### Real-Time Monitoring
+
+Monitoring and observability services gave Respawn insight into session health, latency, and server performance — helping identify and address issues quickly:
+
+> “We are leveraging the global infrastructure of AWS to continuously optimize server and network performance. We have more options and flexibility on the new infrastructure platform.”  
+> — Robert LaCruise, Principal Engineer, Online Game Services, Apex Legends  
+
+After validation, these systems went through production-grade testing, benchmarking, and performance tuning.
+
+At the backend layer, Respawn now enjoys:
+
+- AWS’s global low-latency infrastructure  
+- AWS debugging and server tuning tools  
+- Improved cost efficiency via instance choice  
+- Preservation of existing dev pipelines through wrapper and redirect layer  
+- Greater hosting control via Amazon GameLift APIs such as **TerminationGameSession** and **queue placement override**, integrated with wrapper & redirect  
+
+Respawn didn’t need to slow development or alter pipelines — instead, they gained stronger tools without sacrificing speed.
+
+---
+
+## Migrating in 10 Days
+
+Following evaluation, Respawn executed a **region-by-region cutover** to Amazon GameLift Servers — starting with smaller regions to minimize player impact and build confidence. AWS provided hands-on technical support, real-time observability tools, and pre-tested rollback systems to guarantee stability.  
+
+Before cutover, teams defined rollback thresholds, validated alerting pipelines, and ran migration simulations to ensure readiness. During migration, key metrics were continuously tracked:
+
+- Player connection stability  
+- Latency and jitter  
+- Queue wait times  
+- Match placement success rate  
+
+With automation and real-time alerts, teams were ready to roll back instantly if needed. But the migration went smoothly — with **no visible downtime to players** throughout the 10-day process.  
+
+Respawn shared early results with the community and continues to monitor performance and optimize experience.
 
 ---
 
 ## Conclusion
 
-With four principles:  
-1. **Agility**  
-2. **Evolved fundamentals**  
-3. **Model choice + proprietary data**  
-4. **Transformative solutions**  
+The migration of **Apex Legends** to Amazon GameLift demonstrates what’s possible when modernization is player-focused.  
+With support from AWS and Code Wizards Group, Respawn executed a high-stakes migration in record time — without disrupting gameplay or development pipelines.
 
-AWS provides the most comprehensive foundation for building **production-ready AI agents at scale**.  
-
- The **agentic AI era is here** — and AWS invites you to **reinvent what’s possible for your business**.  
+> “The migration team were put through their paces several times… They did it well, and I’m looking forward to seeing what the future holds.”  
+> — Jared Cugno, Head of Engineering, Apex Legends  

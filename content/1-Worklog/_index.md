@@ -16,7 +16,7 @@ Typically, and as a standard, a worklog is carried out over about 3 months (thro
 
 **Week 2:** [Getting Started with VPC, EC2](1.2-week2/)
 
-**Week 3:** [Doing task B...](1.3-week3/)
+**Week 3:** [Getting started with Amazon S3](1.3-week3/)
 
 **Week 4:** [Doing task C...](1.4-week4/)
 

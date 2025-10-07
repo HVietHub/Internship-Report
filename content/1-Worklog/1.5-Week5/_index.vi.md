@@ -15,42 +15,12 @@ pre: " <b> 1.5. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2   | - Tối ưu hóa chi phí EC2 với Lambda <br> - **Thực hành:** <br>&emsp; + Tạo VPC <br>&emsp; + Tạo nhóm bảo mật <br>&emsp; + Tạo phiên bản EC2 <br>&emsp; + Web-hooks slack đang đến <br>&emsp; + Tạo thẻ cho phiên bản <br>&emsp; + Tạo vai trò cho hàm Lambda <br>&emsp; + Tạo hàm Lambda <br>&emsp; + Hàm dừng phiên bản <br>&emsp; + Hàm bắt đầu phiên bản <br>&emsp; + Kiểm tra kết quả <br>&emsp; + Dọn dẹp tài nguyên                                                                                             | 06/10/2025   | 06/10/2025      |<https://000022.awsstudygroup.com/>|
+| 3   | - Quản lý tài nguyên bằng thẻ và nhóm tài nguyên <br> - **Thực hành:** <br>&emsp; + Tạo phiên bản EC2 bằng thẻ <br>&emsp; + Quản lý thẻ trong tài nguyên AWS <br>&emsp; + Lọc tài nguyên theo thẻ <br>&emsp; + Sử dụng thẻ với CLI <br>&emsp; + Tạo nhóm tài nguyên <br>&emsp; + Dọn dẹp tài nguyên                                            | 07/10/2025   | 07/10/2025      | <https://000027.awsstudygroup.com/> |
+| 4   | - Quản lý quyền truy cập vào các dịch vụ EC2 bằng thẻ tài nguyên thông qua các dịch vụ IAM <br> - **Thực hành:** <br>&emsp; + Tạo người dùng IAM <br>&emsp; + Tạo Chính sách IAM <br>&emsp; + Tạo Vai trò IAM <br>&emsp; + Chuyển đổi Vai trò <br>&emsp; + Khởi tạo quyền truy cập vào bảng điều khiển EC2 trong Khu vực AWS - Tokyo <br>&emsp; + Khởi tạo quyền truy cập vào bảng điều khiển EC2 trong Khu vực AWS - Bắc Virginia <br>&emsp; + Chỉnh sửa Thẻ tài nguyên trên Phiên bản EC2 <br>&emsp; + Kiểm tra Chính sách <br>&emsp; + Dọn dẹp tài nguyên | 08/10/2025   | 08/10/2025      | <https://000028.awsstudygroup.com/> |
+| 5   | - Giới hạn quyền của người dùng với ranh giới quyền IAM <br> - **Thực hành:** <br>&emsp; + Tạo Chính sách hạn chế <br>&emsp; + Tạo Người dùng bị giới hạn IAM <br>&emsp; + Kiểm tra Giới hạn người dùng IAM <br>&emsp; + Dọn dẹp tài nguyên                  | 09/10/2025   | 09/10/2025      | <https://000030.awsstudygroup.com/> |
+| 6   | - Mã hóa khi lưu trữ với AWS KMS <br> - **Thực hành:** <br>&emsp; + Tạo Chính sách và Vai trò <br>&emsp; + Tạo Nhóm và Người dùng <br>&emsp; + Tạo Dịch vụ Quản lý Khóa <br>&emsp; + Tạo Thùng <br>&emsp; + Tải dữ liệu lên S3 <br>&emsp; + Tạo CloudTrail <br>&emsp; + Ghi nhật ký vào CloudTrail <br>&emsp; + Tạo Amazon Athena <br>&emsp; + Truy xuất dữ liệu bằng Athena <br>&emsp; + Kiểm tra và chia sẻ dữ liệu được mã hóa trên S3 <br>&emsp; + Dọn dẹp tài nguyên                                                                                         | 10/10/2025   | 10/10/2025      | <https://000033.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 5:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
 
