@@ -7,7 +7,7 @@ pre: " <b> 4.1. </b> "
 ---
 
 
-# Bài thu hoạch “GenAI-powered App-DB Modernization workshop”
+# Bài thu hoạch “[AWS GenAI Builder Club] AI-Driven Development Life Cycle: Reimagining Software Engineering”
 
 ### Mục Đích Của Sự Kiện
 
@@ -18,9 +18,8 @@ pre: " <b> 4.1. </b> "
 
 ### Danh Sách Diễn Giả
 
-- **Jignesh Shah** - Director, Open Source Databases
-- **Erica Liu** - Sr. GTM Specialist, AppMod
-- **Fabrianne Effendi** - Assc. Specialist SA, Serverless Amazon Web Services
+- **Toan Huynh** - Instructor
+- **My Nguyen** - Instructor
 
 ### Nội Dung Nổi Bật
 
@@ -64,32 +63,12 @@ Chuyển đổi thành hệ thống modular – từng chức năng là một **
 
 ### Những Gì Học Được
 
-#### Tư Duy Thiết Kế
 
-- **Business-first approach**: Luôn bắt đầu từ business domain, không phải technology
-- **Ubiquitous language**: Importance của common vocabulary giữa business và tech teams
-- **Bounded contexts**: Cách identify và manage complexity trong large systems
-
-#### Kiến Trúc Kỹ Thuật
-
-- **Event storming technique**: Phương pháp thực tế để mô hình hóa quy trình kinh doanh
-- Sử dụng **Event-driven communication** thay vì synchronous calls
-- **Integration patterns**: Hiểu khi nào dùng sync, async, pub/sub, streaming
-- **Compute spectrum**: Criteria chọn từ VM → containers → serverless
-
-#### Chiến Lược Hiện Đại Hóa
-
-- **Phased approach**: Không rush, phải có roadmap rõ ràng
-- **7Rs framework**: Nhiều con đường khác nhau tùy thuộc vào đặc điểm của mỗi ứng dụng
-- **ROI measurement**: Cost reduction + business agility
 
 ### Ứng Dụng Vào Công Việc
 
 - **Áp dụng DDD** cho project hiện tại: Event storming sessions với business team
 - **Refactor microservices**: Sử dụng bounded contexts để identify service boundaries
-- **Implement event-driven patterns**: Thay thế một số sync calls bằng async messaging
-- **Serverless adoption**: Pilot AWS Lambda cho một số use cases phù hợp
-- **Try Amazon Q Developer**: Integrate vào development workflow để boost productivity
 
 ### Trải nghiệm trong event
 
