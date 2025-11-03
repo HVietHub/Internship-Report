@@ -24,7 +24,7 @@ pre: " <b> 1.7. </b> "
 
 ### Kết quả đạt được tuần 7:
 
-*Ôn lại kiến thức  dịch vụ và tính năng của AWS:
+*Ôn lại kiến thức dịch vụ và tính năng của AWS:
 
 *Thiết kế kiến trúc bảo mật:
   * IAM (Identity and Access Management) 
