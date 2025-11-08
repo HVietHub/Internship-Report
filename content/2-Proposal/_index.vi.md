@@ -7,100 +7,164 @@ pre: " <b> 2. </b> "
 ---
 
 
-Tại phần này, bạn cần tóm tắt các nội dung trong workshop mà bạn **dự tính** sẽ làm.
+# Mini Food Social  
+## Nền tảng mạng xã hội ẩm thực Serverless với tính năng gợi ý công thức bằng AI
 
-# IoT Weather Platform for Lab Research  
-## Giải pháp AWS Serverless hợp nhất cho giám sát thời tiết thời gian thực  
+### 1. Tóm tắt dự án
+**Mini Food Social** là một nền tảng mạng xã hội ẩm thực được xây dựng hoàn toàn theo kiến trúc **serverless**, tích hợp AI để hỗ trợ sáng tạo công thức món ăn.  
+Người dùng có thể đăng bài, chia sẻ hình ảnh món ăn, và nhận gợi ý công thức nấu ăn được sinh tự động bởi AI dựa trên nguyên liệu hoặc khẩu vị.  
+Ứng dụng hỗ trợ tối đa **100 người dùng đăng ký**, với các tính năng: đăng nhập, đăng bài, bình luận, thích, và gợi ý món ăn thông minh.
 
-### 1. Tóm tắt điều hành  
-IoT Weather Platform được thiết kế dành cho nhóm *ITea Lab* tại TP. Hồ Chí Minh nhằm nâng cao khả năng thu thập và phân tích dữ liệu thời tiết. Nền tảng hỗ trợ tối đa 5 trạm thời tiết, có khả năng mở rộng lên 10–15 trạm, sử dụng thiết bị biên Raspberry Pi kết hợp cảm biến ESP32 để truyền dữ liệu qua MQTT. Nền tảng tận dụng các dịch vụ AWS Serverless để cung cấp giám sát thời gian thực, phân tích dự đoán và tiết kiệm chi phí, với quyền truy cập giới hạn cho 5 thành viên phòng lab thông qua Amazon Cognito.  
+Hệ thống sử dụng các dịch vụ được quản lý toàn phần của AWS, đảm bảo khả năng mở rộng, bảo mật và chi phí tối ưu:
+- **AWS Amplify** (Lưu trữ & CI/CD frontend Next.js)  
+- **Amazon API Gateway** + **AWS Lambda** (Xử lý backend)  
+- **Amazon DynamoDB** (CSDL NoSQL)  
+- **Amazon Bedrock** (AI sinh công thức)  
+- **Amazon Cognito** (Xác thực người dùng)  
+- **Amazon CloudFront + WAF + Route 53** (Phân phối & bảo mật nội dung)  
 
-### 2. Tuyên bố vấn đề  
-*Vấn đề hiện tại*  
-Các trạm thời tiết hiện tại yêu cầu thu thập dữ liệu thủ công, khó quản lý khi có nhiều trạm. Không có hệ thống tập trung cho dữ liệu hoặc phân tích thời gian thực, và các nền tảng bên thứ ba thường tốn kém và quá phức tạp.  
+Giải pháp mang lại nền tảng ổn định, chi phí thấp và dễ mở rộng cho ứng dụng web hiện đại.
 
-*Giải pháp*  
-Nền tảng sử dụng AWS IoT Core để tiếp nhận dữ liệu MQTT, AWS Lambda và API Gateway để xử lý, Amazon S3 để lưu trữ (bao gồm data lake), và AWS Glue Crawlers cùng các tác vụ ETL để trích xuất, chuyển đổi, tải dữ liệu từ S3 data lake sang một S3 bucket khác để phân tích. AWS Amplify với Next.js cung cấp giao diện web, và Amazon Cognito đảm bảo quyền truy cập an toàn. Tương tự như Thingsboard và CoreIoT, người dùng có thể đăng ký thiết bị mới và quản lý kết nối, nhưng nền tảng này hoạt động ở quy mô nhỏ hơn và phục vụ mục đích sử dụng nội bộ. Các tính năng chính bao gồm bảng điều khiển thời gian thực, phân tích xu hướng và chi phí vận hành thấp.  
+---
 
-*Lợi ích và hoàn vốn đầu tư (ROI)*  
-Giải pháp tạo nền tảng cơ bản để các thành viên phòng lab phát triển một nền tảng IoT lớn hơn, đồng thời cung cấp nguồn dữ liệu cho những người nghiên cứu AI phục vụ huấn luyện mô hình hoặc phân tích. Nền tảng giảm bớt báo cáo thủ công cho từng trạm thông qua hệ thống tập trung, đơn giản hóa quản lý và bảo trì, đồng thời cải thiện độ tin cậy dữ liệu. Chi phí hàng tháng ước tính 0,66 USD (theo AWS Pricing Calculator), tổng cộng 7,92 USD cho 12 tháng. Tất cả thiết bị IoT đã được trang bị từ hệ thống trạm thời tiết hiện tại, không phát sinh chi phí phát triển thêm. Thời gian hoàn vốn 6–12 tháng nhờ tiết kiệm đáng kể thời gian thao tác thủ công.  
+### 2. Vấn đề và giải pháp
+#### Vấn đề hiện tại
+Các nền tảng chia sẻ công thức hiện nay thường thiếu tính cá nhân hóa và tương tác.  
+Người dùng mong muốn:
+- Cộng đồng tương tác mạnh mẽ (đăng bài, bình luận, thích bài)  
+- Gợi ý công thức thông minh bằng AI  
+- Đăng nhập dễ dàng, bảo mật cao  
 
-### 3. Kiến trúc giải pháp  
-Nền tảng áp dụng kiến trúc AWS Serverless để quản lý dữ liệu từ 5 trạm dựa trên Raspberry Pi, có thể mở rộng lên 15 trạm. Dữ liệu được tiếp nhận qua AWS IoT Core, lưu trữ trong S3 data lake và xử lý bởi AWS Glue Crawlers và ETL jobs để chuyển đổi và tải vào một S3 bucket khác cho mục đích phân tích. Lambda và API Gateway xử lý bổ sung, trong khi Amplify với Next.js cung cấp bảng điều khiển được bảo mật bởi Cognito.  
+Tuy nhiên, việc vận hành hệ thống như vậy thường tốn kém và phức tạp khi mở rộng.
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+#### Giải pháp đề xuất
+**Mini Food Social** áp dụng kiến trúc **Serverless** và **Event-driven** hoàn toàn trên AWS:
+- **Amplify** triển khai frontend qua GitLab CI/CD.  
+- **Cognito** quản lý đăng nhập, xác thực, và token JWT.  
+- **API Gateway** định tuyến request đến **Lambda**.  
+- **Lambda Router** xử lý logic (bài đăng, người dùng, AI).  
+- **Bedrock** sinh công thức món ăn dựa trên prompt người dùng.  
+- **CloudFront + WAF** phân phối nhanh và đảm bảo an toàn.  
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+---
 
-*Dịch vụ AWS sử dụng*  
-- *AWS IoT Core*: Tiếp nhận dữ liệu MQTT từ 5 trạm, mở rộng lên 15.  
-- *AWS Lambda*: Xử lý dữ liệu và kích hoạt Glue jobs (2 hàm).  
-- *Amazon API Gateway*: Giao tiếp với ứng dụng web.  
-- *Amazon S3*: Lưu trữ dữ liệu thô (data lake) và dữ liệu đã xử lý (2 bucket).  
-- *AWS Glue*: Crawlers lập chỉ mục dữ liệu, ETL jobs chuyển đổi và tải dữ liệu.  
-- *AWS Amplify*: Lưu trữ giao diện web Next.js.  
-- *Amazon Cognito*: Quản lý quyền truy cập cho người dùng phòng lab.  
+### Lợi ích & Hiệu quả đầu tư
+- **Chi phí thấp** — Trả tiền theo mức sử dụng, không cần quản lý máy chủ.  
+- **Tự động mở rộng** — Hoạt động ổn định khi tăng lượng người dùng.  
+- **Tích hợp AI** — Nâng cao trải nghiệm và giữ chân người dùng.  
+- **Bảo mật cao** — Cognito xác thực, dữ liệu mã hóa trong S3 & DynamoDB.  
 
-*Thiết kế thành phần*  
-- *Thiết bị biên*: Raspberry Pi thu thập và lọc dữ liệu cảm biến, gửi tới IoT Core.  
-- *Tiếp nhận dữ liệu*: AWS IoT Core nhận tin nhắn MQTT từ thiết bị biên.  
-- *Lưu trữ dữ liệu*: Dữ liệu thô lưu trong S3 data lake; dữ liệu đã xử lý lưu ở một S3 bucket khác.  
-- *Xử lý dữ liệu*: AWS Glue Crawlers lập chỉ mục dữ liệu; ETL jobs chuyển đổi để phân tích.  
-- *Giao diện web*: AWS Amplify lưu trữ ứng dụng Next.js cho bảng điều khiển và phân tích thời gian thực.  
-- *Quản lý người dùng*: Amazon Cognito giới hạn 5 tài khoản hoạt động.  
+**Chi phí hàng tháng ước tính (không tính Free Tier): ≈ $15.40 USD**  
+**Chi phí hàng năm: ≈ $184.80 USD**
 
-### 4. Triển khai kỹ thuật  
-*Các giai đoạn triển khai*  
-Dự án gồm 2 phần — thiết lập trạm thời tiết biên và xây dựng nền tảng thời tiết — mỗi phần trải qua 4 giai đoạn:  
-1. *Nghiên cứu và vẽ kiến trúc*: Nghiên cứu Raspberry Pi với cảm biến ESP32 và thiết kế kiến trúc AWS Serverless (1 tháng trước kỳ thực tập).  
-2. *Tính toán chi phí và kiểm tra tính khả thi*: Sử dụng AWS Pricing Calculator để ước tính và điều chỉnh (Tháng 1).  
-3. *Điều chỉnh kiến trúc để tối ưu chi phí/giải pháp*: Tinh chỉnh (ví dụ tối ưu Lambda với Next.js) để đảm bảo hiệu quả (Tháng 2).  
-4. *Phát triển, kiểm thử, triển khai*: Lập trình Raspberry Pi, AWS services với CDK/SDK và ứng dụng Next.js, sau đó kiểm thử và đưa vào vận hành (Tháng 2–3).  
+---
 
-*Yêu cầu kỹ thuật*  
-- *Trạm thời tiết biên*: Cảm biến (nhiệt độ, độ ẩm, lượng mưa, tốc độ gió), vi điều khiển ESP32, Raspberry Pi làm thiết bị biên. Raspberry Pi chạy Raspbian, sử dụng Docker để lọc dữ liệu và gửi 1 MB/ngày/trạm qua MQTT qua Wi-Fi.  
-- *Nền tảng thời tiết*: Kiến thức thực tế về AWS Amplify (lưu trữ Next.js), Lambda (giảm thiểu do Next.js xử lý), AWS Glue (ETL), S3 (2 bucket), IoT Core (gateway và rules), và Cognito (5 người dùng). Sử dụng AWS CDK/SDK để lập trình (ví dụ IoT Core rules tới S3). Next.js giúp giảm tải Lambda cho ứng dụng web fullstack.  
+### 3. Kiến trúc hệ thống
+Hệ thống được chia thành **5 lớp Serverless**, giúp quản lý độc lập và dễ mở rộng:
 
-### 5. Lộ trình & Mốc triển khai  
-- *Trước thực tập (Tháng 0)*: 1 tháng lên kế hoạch và đánh giá trạm cũ.  
-- *Thực tập (Tháng 1–3)*:  
-    - Tháng 1: Học AWS và nâng cấp phần cứng.  
-    - Tháng 2: Thiết kế và điều chỉnh kiến trúc.  
-    - Tháng 3: Triển khai, kiểm thử, đưa vào sử dụng.  
-- *Sau triển khai*: Nghiên cứu thêm trong vòng 1 năm.  
+- **Lớp CI/CD:** GitLab tự động triển khai — **Amplify** cho frontend, **CDK + CloudFormation** cho backend.  
+- **Lớp Edge:** Bảo mật & phân phối lưu lượng với **Route 53** (DNS), **WAF** (Web Application Firewall), và **CloudFront** (CDN).  
+  CloudFront truy cập **S3** qua **OAI (Origin Access Identity)** để tăng bảo mật.  
+- **Lớp Ứng dụng:** **Amplify** lưu trữ frontend (Next.js); **API Gateway + Lambda** xử lý backend; **Cognito** xác thực & cấp token.  
+- **Lớp Dữ liệu:** **DynamoDB** lưu dữ liệu bài đăng và người dùng; **S3** lưu hình ảnh; **EventBridge** xử lý sự kiện bất đồng bộ.  
+- **Lớp Quan sát:** **CloudWatch** (giám sát), **X-Ray** (truy vết request), **SNS** (gửi thông báo chi phí và cảnh báo).
 
-### 6. Ước tính ngân sách  
-Có thể xem chi phí trên [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01)  
-Hoặc tải [tệp ước tính ngân sách](../attachments/budget_estimation.pdf).  
+![Mini Food Social Architecture](/images/2-Proposal/FsocialArchitecture.png)
 
-*Chi phí hạ tầng*  
-- AWS Lambda: 0,00 USD/tháng (1.000 request, 512 MB lưu trữ).  
-- S3 Standard: 0,15 USD/tháng (6 GB, 2.100 request, 1 GB quét).  
-- Truyền dữ liệu: 0,02 USD/tháng (1 GB vào, 1 GB ra).  
-- AWS Amplify: 0,35 USD/tháng (256 MB, request 500 ms).  
-- Amazon API Gateway: 0,01 USD/tháng (2.000 request).  
-- AWS Glue ETL Jobs: 0,02 USD/tháng (2 DPU).  
-- AWS Glue Crawlers: 0,07 USD/tháng (1 crawler).  
-- MQTT (IoT Core): 0,08 USD/tháng (5 thiết bị, 45.000 tin nhắn).  
+### Dịch vụ AWS được sử dụng
+| Danh mục | Dịch vụ |
+|-----------|----------|
+| **Frontend & CI/CD** | AWS Amplify (Next.js), GitLab, AWS CDK, CloudFormation |
+| **Edge & Bảo mật** | Route 53, CloudFront, WAF |
+| **Ứng dụng & Xử lý** | API Gateway, AWS Lambda, Amazon Cognito |
+| **Dữ liệu & AI** | DynamoDB (single-table), S3, Amazon Bedrock |
+| **Quan sát & Sự kiện** | CloudWatch, X-Ray, SNS, EventBridge |
 
-*Tổng*: 0,7 USD/tháng, 8,40 USD/12 tháng  
-- *Phần cứng*: 265 USD một lần (Raspberry Pi 5 và cảm biến).  
+---
 
-### 7. Đánh giá rủi ro  
-*Ma trận rủi ro*  
-- Mất mạng: Ảnh hưởng trung bình, xác suất trung bình.  
-- Hỏng cảm biến: Ảnh hưởng cao, xác suất thấp.  
-- Vượt ngân sách: Ảnh hưởng trung bình, xác suất thấp.  
+### Thiết kế thành phần
+- **Truy cập người dùng:** User → CloudFront → Amplify (Frontend)  
+- **Xác thực:** CloudFront → Cognito (Hosted UI redirect)  
+- **API:** Amplify → Route 53 → CloudFront → WAF → API Gateway  
+- **Ủy quyền:** API Gateway → Cognito Authorizer  
+- **Xử lý backend:** API Router Lambda → DynamoDB / S3 / Bedrock  
+- **Sinh công thức AI:** AI Handler Lambda → Bedrock (Claude model)  
+- **Phân phối hình ảnh:** CloudFront → S3 (qua OAI)  
+- **Giám sát & sự kiện:** EventBridge, CloudWatch, X-Ray, SNS  
 
-*Chiến lược giảm thiểu*  
-- Mạng: Lưu trữ cục bộ trên Raspberry Pi với Docker.  
-- Cảm biến: Kiểm tra định kỳ, dự phòng linh kiện.  
-- Chi phí: Cảnh báo ngân sách AWS, tối ưu dịch vụ.  
+---
 
-*Kế hoạch dự phòng*  
-- Quay lại thu thập thủ công nếu AWS gặp sự cố.  
-- Sử dụng CloudFormation để khôi phục cấu hình liên quan đến chi phí.  
+### 4. Triển khai kỹ thuật
+#### Các giai đoạn triển khai
+| Giai đoạn | Thời gian | Mô tả |
+|------------|------------|-------|
+| **1. Thiết lập & CI/CD** | Tuần 1–3 | Cấu hình CDK, kết nối Amplify và GitLab |
+| **2. Backend cốt lõi** | Tuần 4–7 | Cognito, API Gateway, Lambda Router |
+| **3. Frontend** | Tuần 8–10 | Tích hợp Next.js UI và API |
+| **4. AI & Giám sát** | Tuần 11–13 | Tích hợp Bedrock, CloudWatch, X-Ray |
+| **5. Kiểm thử cuối** | Tuần 14 | Load test & triển khai Production |
 
-### 8. Kết quả kỳ vọng  
-*Cải tiến kỹ thuật*: Dữ liệu và phân tích thời gian thực thay thế quy trình thủ công. Có thể mở rộng tới 10–15 trạm.  
-*Giá trị dài hạn*: Nền tảng dữ liệu 1 năm cho nghiên cứu AI, có thể tái sử dụng cho các dự án tương lai.
+#### Yêu cầu kỹ thuật
+- **Frontend:** Next.js (Amplify Hosting)  
+- **Backend:** Node.js (Lambda), API Gateway, Cognito  
+- **AI:** Amazon Bedrock (Claude)  
+- **CSDL:** DynamoDB (single-table, GSI)  
+- **DevOps:** GitLab CI/CD cho Amplify & CDK  
+
+---
+
+### 5. Lộ trình & Mốc hoàn thành
+| Tháng | Kết quả |
+|--------|----------|
+| **Tháng 1** | Hoàn thiện thiết kế kiến trúc & CI/CD |
+| **Tháng 2** | Hoàn thiện xác thực & backend |
+| **Tháng 3** | Tích hợp frontend, AI & quan sát hệ thống |
+| **Cuối tháng 3** | ✅ Triển khai bản Production |
+
+---
+
+### 6. Ước tính chi phí
+#### Chi phí dịch vụ AWS (100 người dùng hoạt động, không tính Free Tier)
+| Dịch vụ | Mô tả | Chi phí tháng (USD) |
+|----------|--------|---------------------|
+| **AWS Amplify** | Lưu trữ & CI/CD frontend | **$2.00** |
+| **Amazon CloudFront** | CDN phân phối toàn cầu (100GB) | **$5.00** |
+| **AWS WAF** | 1 Web ACL + 1 rule cơ bản | **$5.00** |
+| **Amazon API Gateway** | ~25,000 request/tháng | **$0.40** |
+| **AWS Lambda** | 4 hàm, ~1M request/tháng | **$0.80** |
+| **Amazon DynamoDB** | On-demand mode | **$0.60** |
+| **Amazon S3** | 5GB file + 20GB hình ảnh | **$0.50** |
+| **Amazon Cognito** | 100 người dùng/tháng | **$0.50** |
+| **Amazon Bedrock** | Sinh văn bản (~50K tokens) | **$2.50** |
+| **Amazon Route 53** | Tên miền + DNS | **$1.30** |
+| **CloudFormation / SNS / X-Ray** | Hạ tầng + giám sát | **$0.00** |
+
+**➡ Tổng chi phí hàng tháng:** ≈ **$15.40 USD**  
+**➡ Chi phí hàng năm:** ≈ **$184.80 USD**
+
+---
+
+### 7. Đánh giá rủi ro
+| Rủi ro | Mức độ ảnh hưởng | Xác suất |
+|--------|------------------|----------|
+| Sử dụng Bedrock vượt dự kiến | Trung bình | Trung bình |
+| Cấu hình sai Cognito | Cao | Trung bình |
+| Rule WAF chặn nhầm traffic | Trung bình | Thấp |
+
+**Giải pháp giảm thiểu:**  
+- Thiết lập cảnh báo chi phí CloudWatch cho Bedrock.  
+- Áp dụng nguyên tắc **IAM least privilege** cho Lambda.  
+- Kiểm thử rule WAF trong môi trường staging trước production.
+
+---
+
+### 8. Kết quả kỳ vọng
+#### Kết quả kỹ thuật
+- Hoàn thiện nền tảng **mạng xã hội ẩm thực serverless** có tích hợp AI.  
+- Hệ thống bảo mật và mở rộng tốt với **Cognito**, **WAF**, **CloudFront**.  
+- Giám sát và cảnh báo tự động bằng **CloudWatch** và **X-Ray**.
+
+#### Giá trị lâu dài
+- Thể hiện năng lực thực hành **Serverless, DevOps, AI Integration**.  
+- Có thể mở rộng lên **500+ người dùng** mà không cần thay đổi kiến trúc.  
+- Là **mẫu kiến trúc chuẩn AWS** có thể tái sử dụng cho các dự án sau.
