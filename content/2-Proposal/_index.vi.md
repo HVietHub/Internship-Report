@@ -66,10 +66,10 @@ Hệ thống được chia thành **5 lớp Serverless**, giúp quản lý độ
 - **Lớp Edge:** Bảo mật & phân phối lưu lượng với **Route 53** (DNS), **WAF** (Web Application Firewall), và **CloudFront** (CDN).  
   CloudFront truy cập **S3** qua **OAI (Origin Access Identity)** để tăng bảo mật.  
 - **Lớp Ứng dụng:** **Amplify** lưu trữ frontend (Next.js); **API Gateway + Lambda** xử lý backend; **Cognito** xác thực & cấp token.  
-- **Lớp Dữ liệu:** **DynamoDB** lưu dữ liệu bài đăng và người dùng; **S3** lưu hình ảnh; **EventBridge** xử lý sự kiện bất đồng bộ.  
+- **Lớp Dữ liệu:** **DynamoDB** lưu dữ liệu bài đăng và người dùng; **S3** lưu hình ảnh;  
 - **Lớp Quan sát:** **CloudWatch** (giám sát), **X-Ray** (truy vết request), **SNS** (gửi thông báo chi phí và cảnh báo).
 
-![Mini Food Social Architecture](/images/2-Proposal/FsocialArchitecture.png)
+![Mini Food Social Architecture](/images/2-Proposal/Fsocialarchitecture.png)
 
 ### Dịch vụ AWS được sử dụng
 | Danh mục | Dịch vụ |
@@ -78,7 +78,7 @@ Hệ thống được chia thành **5 lớp Serverless**, giúp quản lý độ
 | **Edge & Bảo mật** | Route 53, CloudFront, WAF |
 | **Ứng dụng & Xử lý** | API Gateway, AWS Lambda, Amazon Cognito |
 | **Dữ liệu & AI** | DynamoDB (single-table), S3, Amazon Bedrock |
-| **Quan sát & Sự kiện** | CloudWatch, X-Ray, SNS, EventBridge |
+| **Quan sát & Sự kiện** | CloudWatch, X-Ray, SNS  |
 
 ---
 
@@ -90,7 +90,7 @@ Hệ thống được chia thành **5 lớp Serverless**, giúp quản lý độ
 - **Xử lý backend:** API Router Lambda → DynamoDB / S3 / Bedrock  
 - **Sinh công thức AI:** AI Handler Lambda → Bedrock (Claude model)  
 - **Phân phối hình ảnh:** CloudFront → S3 (qua OAI)  
-- **Giám sát & sự kiện:** EventBridge, CloudWatch, X-Ray, SNS  
+- **Giám sát & sự kiện:**  CloudWatch, X-Ray, SNS  
 
 ---
 
@@ -119,7 +119,7 @@ Hệ thống được chia thành **5 lớp Serverless**, giúp quản lý độ
 | **Tháng 1** | Hoàn thiện thiết kế kiến trúc & CI/CD |
 | **Tháng 2** | Hoàn thiện xác thực & backend |
 | **Tháng 3** | Tích hợp frontend, AI & quan sát hệ thống |
-| **Cuối tháng 3** | ✅ Triển khai bản Production |
+| **Cuối tháng 3** |  Triển khai bản Production |
 
 ---
 

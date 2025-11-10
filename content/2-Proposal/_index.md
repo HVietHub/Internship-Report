@@ -73,7 +73,7 @@ The **Data Storage Layer** uses **DynamoDB** for core data, **S3** for image sto
 
 Finally, the **Observability Layer** integrates **CloudWatch** (logs & metrics), **X-Ray** (request tracing), and **SNS** (alerting), ensuring transparency and reliability.
 
-![Mini Food Social Architecture](/images/2-Proposal/FsocialArchitecture.png)
+![Mini Food Social Architecture](/images/2-Proposal/Fsocialarchitecture.png)
 
 ### AWS Services Used
 | Category | Services |
