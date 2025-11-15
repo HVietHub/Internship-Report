@@ -15,42 +15,12 @@ pre: " <b> 1.10. </b> "
 ### Các công việc cần triển khai trong tuần này:
 | Thứ | Công việc                                                                                                                                                                                   | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu                            |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
-| 2   | - Làm quen với các thành viên FCJ <br> - Đọc và lưu ý các nội quy, quy định tại đơn vị thực tập                                                                                             | 11/08/2025   | 11/08/2025      |
-| 3   | - Tìm hiểu AWS và các loại dịch vụ <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                            | 12/08/2025   | 12/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 2 | - LMR: Xây dựng và Triển khai Ứng dụng Không máy chủ Toàn cầu với Amazon DynamoDB <br> **Thực hành:** <br>&emsp; + Mô-đun 1: Triển khai tài nguyên phụ trợ <br>&emsp; + Mô-đun 2: Khám phá Bảng Toàn cầu <br>&emsp; + Mô-đun 3: Tương tác với Giao diện Globalflix <br> - Chủ đề Thảo luận về Bảng Toàn cầu <br> - LEDA: Xây dựng Kiến trúc Hướng sự kiện Không máy chủ với DynamoDB <br> - **Thực hành:** <br>&emsp; + Bài thực hành 1: Kết nối đường ống <br>&emsp; + Bài thực hành 2: Đảm bảo khả năng chịu lỗi và xử lý chính xác một lần<br>&emsp; + Dọn dẹp tài nguyên | 11/10/2025 | 11/10/2025 | <https://000039.awsstudygroup.com/> |
+| 3 | - LGME: Mô hình hóa dữ liệu người chơi trò chơi với Amazon DynamoDB <br> - **Thực hành:** <br>&emsp; + Lập kế hoạch mô hình dữ liệu <br>&emsp; + Sử dụng cốt lõi: hồ sơ người dùng và trò chơi <br>&emsp; + Tìm trò chơi đang mở <br>&emsp; + Tham gia và đóng trò chơi <br>&emsp; + Xem các trò chơi trước đó <br>&emsp; + Tóm tắt & Dọn dẹp <br> - LDC: Thách thức thiết kế | 11/11/2025 | 11/11/2025 | <https://000039.awsstudygroup.com/> |
+| 4 | - Phân tích chi phí và hiệu suất với AWS Glue và Amazon Athena <br> - **Thực hành:** <br>&emsp; + Chuẩn bị cơ sở dữ liệu <br>&emsp; + Xây dựng cơ sở dữ liệu <br>&emsp; + Kiểm tra cơ sở dữ liệu <br>&emsp; + Dữ liệu trong bảng <br>&emsp; + Chi phí <br>&emsp; + Gắn thẻ và Phân bổ Chi phí <br>&emsp; + Sử dụng <br>&emsp; + Tài nguyên dọn dẹp | 12/11/2025 | 12/11/2025 | <https://000040.awsstudygroup.com/> |
+| 5 | - Làm việc với Amazon DynamoDB <br> - **Thực hành:** <br>&emsp; + Quản lý bằng AWS Management Console <br>&emsp; + Sử dụng AWS CloudShell <br>&emsp; + Cấu hình AWS CLI <br>&emsp; + Bắt đầu với Python và DynamoDB <br> - Tài nguyên dọn dẹp | 13/11/2025 | 13/11/2025 | <https://000060.awsstudygroup.com/> |
+| 6 | - Xây dựng Datalake với Dữ liệu của Bạn <br> - **Thực hành:** <br>&emsp; + Chuẩn bị Dữ liệu <br>&emsp; + Thu thập dữ liệu với AWS Glue <br>&emsp; + Truy vấn với Athena <br>&emsp; + Trực quan hóa với QuickSight <br>&emsp; + Dọn dẹp tài nguyên | 14/11/2025 | 14/11/2025 | <https://000070.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 10:
-
-* Hiểu AWS là gì và nắm được các nhóm dịch vụ cơ bản: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Đã tạo và cấu hình AWS Free Tier account thành công.
-
-* Làm quen với AWS Management Console và biết cách tìm, truy cập, sử dụng dịch vụ từ giao diện web.
-
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
-
 

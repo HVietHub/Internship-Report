@@ -16,40 +16,11 @@ pre: " <b> 1.10. </b> "
 ### Tasks to be carried out this week:
 | Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-
+| 2   | - LMR: Build and Deploy a Global Serverless Application with Amazon DynamoDB <br> **Practice:** <br>&emsp; + Module 1: Deploy the backend resources <br>&emsp; + Module 2: Explore Global Tables <br>&emsp; + Module 3: Interact with the Globalflix Interface <br> - Global Tables Discussion Topics <br> - LEDA: Build a Serverless Event Driven Architecture with DynamoDB <br> - **Practice:** <br>&emsp; + Lab 1: Connect the pipeline <br>&emsp; + Lab 2: Ensure fault tolerance and exactly once processing<br>&emsp; + Cleanup resource | 11/10/2025 | 11/10/2025      | <https://000039.awsstudygroup.com/> |
+| 3   | - LGME: Modeling Game Player Data with Amazon DynamoDB <br> - **Practice:** <br>&emsp; + Plan data model <br>&emsp; + Core usage: user profiles and games <br>&emsp; + Find open games <br>&emsp; + Join and close games <br>&emsp; + View past games <br>&emsp; + Summary & Cleanup <br> - LDC: Design Challenges                |  11/11/2025 | 11/11/2025    | <https://000039.awsstudygroup.com/> |
+| 4   | - Cost and performance analysis with AWS Glue and Amazon Athena <br> - **Practice:**  <br>&emsp; + Preparing the database <br>&emsp; + Building a database  <br>&emsp; + Database Check  <br>&emsp; + Data in the Table  <br>&emsp; + Cost  <br>&emsp; + Tagging and Cost Allocation  <br>&emsp; + Usage  <br>&emsp; + Cleanup resource  | 11/12/2025 | 11/12/2025    | <https://000040.awsstudygroup.com/> |
+| 5   | - Work with Amazon DynamoDB <br> - **Practice:** <br>&emsp; + Manage using AWS Management Console  <br>&emsp; + Use AWS CloudShell <br>&emsp; + Configure AWS CLI <br>&emsp; + Getting started with Python and DynamoDB <br> - Clean up resource                             | 11/13/2025 | 11/13/2025  | <https://000060.awsstudygroup.com/> |
+| 6   | - Building a Datalake with Your Data <br> - **Practice:** <br>&emsp; + Preparing Data <br>&emsp; + Data Ingestion with AWS Glue <br>&emsp; + Query with Athena <br>&emsp; + Visualization with QuickSight <br>&emsp; + Resource Cleanup                                                                                     | 11/14/2025 | 11/14/2025      | <https://000070.awsstudygroup.com/> |
 
 ### Week 10 Achievements:
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
