@@ -12,7 +12,7 @@ pre: " <b> 2. </b> "
 
 **Ngày:** 30/11/2025
 
-📥 **[Tải Đề Xuất Đầy Đủ (DOCX)](Proposal.docx)**
+📥 **[Tải Đề Xuất Đầy Đủ (DOCX)](/Proposal.docx)**
 
 ---
 
