@@ -753,7 +753,7 @@ Anthropic model)
 | Nguyen Van Truong    | Member | DevOps          | truongnvse182034@fpt.edu.vn |
 | Huynh Duc Anh        | Member | Cloud Engineer  | anhhdse183114@fpt.edu.vn    |
 | Nguyen Thanh Hong    | Member | Tester          | hongntse183239@fpt.edu.vn   |
-| Nguyen Quy Duc       | Member | Frontend        | ducnqse182087@fpt.edu.vn    |
+| Nguyen Qui Duc       | Member | Frontend        | ducnqse182087@fpt.edu.vn    |
 
 **Project Escalation Contacts**
 
