@@ -12,7 +12,7 @@ pre: " <b> 2. </b> "
 
 **Ngày:** 30/11/2025
 
-📥 <a href="../../Proposal.docx" download="Proposal.docx"><strong>Tải Đề Xuất Đầy Đủ (DOCX)</strong></a>
+📥 <a href="https://hviethub.github.io/Internship-Report/Proposal.docx" download="Proposal.docx"><strong>Tải Đề Xuất Đầy Đủ (DOCX)</strong></a>
 
 ---
 
