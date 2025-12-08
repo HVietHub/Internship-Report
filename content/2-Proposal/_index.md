@@ -12,7 +12,7 @@ pre: " <b> 2. </b> "
 
 **Date:** 30/11/2025
 
-📥 **[Download Full Proposal (DOCX)](../../Proposal.docx)**
+📥 <a href="../../Proposal.docx" download="Proposal.docx"><strong>Download Full Proposal (DOCX)</strong></a>
 
 ---
 
