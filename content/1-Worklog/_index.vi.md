@@ -35,4 +35,4 @@ Thông thường và cũng là tiêu chuẩn, một worklog được thực hi�
 
 **Tuần 11:** [Analytics trên AWS - Glue, Athena, Kinesis, Redshift và QuickSight](1.11-week11/)
 
-**Tuần 12:** [Hoàn thành Dự án Cuối kỳ - Ứng dụng EveryoneCook](1.12-week12/)
+**Tuần 12:** [Tìm lỗi và Fix Bug của Dự án](1.12-week12/)
