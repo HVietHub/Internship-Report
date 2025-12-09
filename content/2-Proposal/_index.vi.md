@@ -328,27 +328,33 @@ Quy trình build và deployment ứng dụng cho frontend (Next.js) sẽ đượ
 
 # 5. NHÓM DỰ ÁN
 
-**Partner Executive Sponsor**
+**Nhà bảo trợ điều hành phía đối tác**
 
 | Tên | Chức danh | Mô tả | Liên hệ |
 |-----|-----------|-------|---------|
 | Nguyen Gia Hung | Director of FCJ Vietnam Training Program | Executive Sponsor chịu trách nhiệm giám sát tổng thể chương trình thực tập FCJ | hunggia@amazon.com |
 
-**Project Stakeholders**
+**Các bên liên quan của dự án**
 
 | Tên | Chức danh | Vai trò | Liên hệ |
 |-----|-----------|---------|---------|
 | Van Hoang Kha | Support Teams | Executive Assistant chịu trách nhiệm giám sát tổng thể chương trình thực tập FCJ | Khab9thd@gmail.com |
 
-**Partner Project Team**
+**Đội dự án của đối tác**
 
 | Tên | Vai trò | Trách nhiệm | Liên hệ |
 |-----|---------|-------------|---------|
-| Pham Minh Hoang Viet | Leader | Project Manager | vietpmhse181851@gmail.com |
+| Pham Minh Hoang Viet | Leader | Project Manager | vietpmhse181851@fpt.edu.vn |
 | Nguyen Van Truong | Member | DevOps | truongnvse182034@fpt.edu.vn |
 | Huynh Duc Anh | Member | Cloud Engineer | anhhdse183114@fpt.edu.vn |
 | Nguyen Thanh Hong | Member | Tester | hongntse183239@fpt.edu.vn |
 | Nguyen Quy Duc | Member | Frontend | ducnqse182087@fpt.edu.vn |
+**Danh sách liên hệ xử lý leo thang trong dự án**
+
+| Name                 | Title  | Role            | Email / Contact Info      |
+|----------------------|--------|-----------------|---------------------------|
+| Pham Minh Hoang Viet | Leader | Project Manager | vietpmhse181851@fpt.edu.vn |
+
 
 ---
 

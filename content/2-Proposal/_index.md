@@ -749,7 +749,7 @@ Anthropic model)
 
 | Name                 | Title  | Role            | Email / Contact Info        |
 |----------------------|--------|-----------------|-----------------------------|
-| Pham Minh Hoang Viet | Leader | Project Manager | vietpmhse181851@gmail.com   |
+| Pham Minh Hoang Viet | Leader | Project Manager | vietpmhse181851@fpt.edu.vn  |
 | Nguyen Van Truong    | Member | DevOps          | truongnvse182034@fpt.edu.vn |
 | Huynh Duc Anh        | Member | Cloud Engineer  | anhhdse183114@fpt.edu.vn    |
 | Nguyen Thanh Hong    | Member | Tester          | hongntse183239@fpt.edu.vn   |
@@ -759,7 +759,7 @@ Anthropic model)
 
 | Name                 | Title  | Role            | Email / Contact Info      |
 |----------------------|--------|-----------------|---------------------------|
-| Pham Minh Hoang Viet | Leader | Project Manager | vietpmhse181851@gmail.com |
+| Pham Minh Hoang Viet | Leader | Project Manager | vietpmhse181851@fpt.edu.vn |
 
 # 6. Resources & cost estimates 
 
