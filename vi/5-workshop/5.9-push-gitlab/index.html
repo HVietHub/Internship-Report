@@ -1,0 +1,336 @@
+<!doctype html><html lang=vi class="js csstransforms3d"><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=generator content="Hugo 0.134.3"><meta name=description content><meta name=author content="viethoangpham1204@gmail.com"><link rel=icon href=../../../images/favicon.png type=image/png><title>Push lên GitLab :: Báo cáo thực tập</title>
+<link href=../../../css/nucleus.css?1765683798 rel=stylesheet><link href=../../../css/fontawesome-all.min.css?1765683798 rel=stylesheet><link href=../../../css/hybrid.css?1765683798 rel=stylesheet><link href=../../../css/featherlight.min.css?1765683798 rel=stylesheet><link href=../../../css/perfect-scrollbar.min.css?1765683798 rel=stylesheet><link href=../../../css/auto-complete.css?1765683798 rel=stylesheet><link href=../../../css/atom-one-dark-reasonable.css?1765683798 rel=stylesheet><link href=../../../css/theme.css?1765683798 rel=stylesheet><link href=../../../css/hugo-theme.css?1765683798 rel=stylesheet><link href=../../../css/theme-workshop.css?1765683798 rel=stylesheet><script src=../../../js/jquery-3.3.1.min.js?1765683798></script><style>:root #header+#content>#left>#rlblock_left{display:none!important}</style></head><body data-url=../../../vi/5-workshop/5.9-push-gitlab/><nav id=sidebar class=showVisitedLinks><div id=header-wrapper><div id=header><a id=logo href=../../../><svg id="Layer_1" data-name="Layer 1" viewBox="0 0 60 30" width="30%"><defs><style>.cls-1{fill:#fff}.cls-2{fill:#f90;fill-rule:evenodd}</style></defs><title>AWS-Logo_White-Color</title><path class="cls-1" d="M14.09 10.85a4.7 4.7.0 00.19 1.48 7.73 7.73.0 00.54 1.19.77.77.0 01.12.38.64.64.0 01-.32.49l-1 .7a.83.83.0 01-.44.15.69.69.0 01-.49-.23 3.8 3.8.0 01-.6-.77q-.25-.42-.51-1a6.14 6.14.0 01-4.89 2.3 4.54 4.54.0 01-3.32-1.19 4.27 4.27.0 01-1.22-3.2 4.28 4.28.0 011.46-3.4A6.06 6.06.0 017.69 6.46a12.47 12.47.0 011.76.13q.92.13 1.91.36V5.73a3.65 3.65.0 00-.79-2.66A3.81 3.81.0 007.86 2.3a7.71 7.71.0 00-1.79.22 12.78 12.78.0 00-1.79.57 4.55 4.55.0 01-.58.22h-.26q-.35.0-.35-.52V2a1.09 1.09.0 01.12-.58 1.2 1.2.0 01.47-.35A10.88 10.88.0 015.77.32 10.19 10.19.0 018.36.0a6 6 0 014.35 1.35 5.49 5.49.0 011.38 4.09zM7.34 13.38a5.36 5.36.0 001.72-.31A3.63 3.63.0 0010.63 12 2.62 2.62.0 0011.19 11a5.63 5.63.0 00.16-1.44v-.7a14.35 14.35.0 00-1.53-.28 12.37 12.37.0 00-1.56-.1 3.84 3.84.0 00-2.47.67A2.34 2.34.0 005 11a2.35 2.35.0 00.61 1.76A2.4 2.4.0 007.34 13.38zm13.35 1.8a1 1 0 01-.64-.16 1.3 1.3.0 01-.35-.65L15.81 1.51a3 3 0 01-.15-.67.36.36.0 01.41-.41H17.7a1 1 0 01.65.16 1.4 1.4.0 01.33.65l2.79 11 2.59-11A1.17 1.17.0 0124.39.6a1.1 1.1.0 01.67-.16H26.4a1.1 1.1.0 01.67.16 1.17 1.17.0 01.32.65L30 12.39 32.88 1.25A1.39 1.39.0 0133.22.6a1 1 0 01.65-.16h1.54a.36.36.0 01.41.41 1.36 1.36.0 010 .26 3.64 3.64.0 01-.12.41l-4 12.86a1.3 1.3.0 01-.35.65 1 1 0 01-.64.16H29.25a1 1 0 01-.67-.17 1.26 1.26.0 01-.32-.67L25.67 3.64l-2.56 10.7a1.26 1.26.0 01-.32.67 1 1 0 01-.67.17zm21.36.44a11.28 11.28.0 01-2.56-.29 7.44 7.44.0 01-1.92-.67 1 1 0 01-.61-.93v-.84q0-.52.38-.52a.9.9.0 01.31.06l.42.17a8.77 8.77.0 001.83.58 9.78 9.78.0 002 .2 4.48 4.48.0 002.43-.55 1.76 1.76.0 00.86-1.57 1.61 1.61.0 00-.45-1.16A4.29 4.29.0 0043 9.22l-2.41-.76A5.15 5.15.0 0138 6.78a3.94 3.94.0 01-.83-2.41 3.7 3.7.0 01.45-1.85 4.47 4.47.0 011.19-1.37 5.27 5.27.0 011.7-.86A7.4 7.4.0 0142.6.0a8.87 8.87.0 011.12.07q.57.07 1.08.19t.95.26a4.27 4.27.0 01.7.29 1.59 1.59.0 01.49.41.94.94.0 01.15.55v.79q0 .52-.38.52a1.76 1.76.0 01-.64-.2 7.74 7.74.0 00-3.2-.64 4.37 4.37.0 00-2.21.47 1.6 1.6.0 00-.79 1.48 1.58 1.58.0 00.49 1.18 4.94 4.94.0 001.83.92L44.55 7a5.08 5.08.0 012.57 1.6A3.76 3.76.0 0147.9 11a4.21 4.21.0 01-.44 1.93 4.4 4.4.0 01-1.21 1.47 5.43 5.43.0 01-1.85.93A8.25 8.25.0 0142.05 15.62z"/><path class="cls-2" d="M45.19 23.81C39.72 27.85 31.78 30 25 30A36.64 36.64.0 01.22 20.57c-.51-.46-.06-1.09.56-.74A49.78 49.78.0 0025.53 26.4 49.23 49.23.0 0044.4 22.53C45.32 22.14 46.1 23.14 45.19 23.81z"/><path class="cls-2" d="M47.47 21.21c-.7-.9-4.63-.42-6.39-.21-.53.06-.62-.4-.14-.74 3.13-2.2 8.27-1.57 8.86-.83s-.16 5.89-3.09 8.35c-.45.38-.88.18-.68-.32C46.69 25.8 48.17 22.11 47.47 21.21z"/></svg></a></div><div class=searchbox><label for=search-by><i class="fas fa-search"></i></label>
+<input data-search-input id=search-by type=search placeholder=Search...>
+<span data-search-clear><i class="fas fa-times"></i></span></div><script type=text/javascript src=../../../js/lunr.min.js?1765683798></script><script type=text/javascript src=../../../js/auto-complete.js?1765683798></script><script type=text/javascript>var baseurl="https://hviethub.github.io/Internship-Report//vi"</script><script type=text/javascript src=../../../js/search.js?1765683798></script></div><div class=highlightable><ul class=topics><li data-nav-id=/vi/1-worklog/ title="Nhật ký công việc" class=dd-item><a href=../../../vi/1-worklog/><b>1. </b>Nhật ký công việc
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/vi/1-worklog/1.2-week2/ title="Worklog Tuần 2" class=dd-item><a href=../../../vi/1-worklog/1.2-week2/><b>1.2. </b>Worklog Tuần 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.1-week1/ title="Worklog Tuần 1" class=dd-item><a href=../../../vi/1-worklog/1.1-week1/><b>1.1. </b>Worklog Tuần 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.3-week3/ title="Worklog Tuần 3" class=dd-item><a href=../../../vi/1-worklog/1.3-week3/><b>1.3. </b>Worklog Tuần 3
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.4-week4/ title="Worklog Tuần 4" class=dd-item><a href=../../../vi/1-worklog/1.4-week4/><b>1.4. </b>Worklog Tuần 4
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.5-week5/ title="Worklog Tuần 5" class=dd-item><a href=../../../vi/1-worklog/1.5-week5/><b>1.5. </b>Worklog Tuần 5
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.6-week6/ title="Worklog Tuần 6" class=dd-item><a href=../../../vi/1-worklog/1.6-week6/><b>1.6. </b>Worklog Tuần 6
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.7-week7/ title="Worklog Tuần 7" class=dd-item><a href=../../../vi/1-worklog/1.7-week7/><b>1.7. </b>Worklog Tuần 7
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.8-week8/ title="Worklog Tuần 8" class=dd-item><a href=../../../vi/1-worklog/1.8-week8/><b>1.8. </b>Worklog Tuần 8
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.9-week9/ title="Worklog Tuần 9" class=dd-item><a href=../../../vi/1-worklog/1.9-week9/><b>1.9. </b>Worklog Tuần 9
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.10-week10/ title="Worklog Tuần 10" class=dd-item><a href=../../../vi/1-worklog/1.10-week10/><b>1.10. </b>Worklog Tuần 10
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.11-week11/ title="Worklog Tuần 11" class=dd-item><a href=../../../vi/1-worklog/1.11-week11/><b>1.11. </b>Worklog Tuần 11
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/1-worklog/1.12-week12/ title="Worklog Tuần 12" class=dd-item><a href=../../../vi/1-worklog/1.12-week12/><b>1.12 </b>Worklog Tuần 12
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/vi/2-proposal/ title="Đề xuất dự án" class=dd-item><a href=../../../vi/2-proposal/><b>2. </b>Đề xuất dự án
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/3-blogstranslated/ title="Các bài blogs đã dịch" class=dd-item><a href=../../../vi/3-blogstranslated/><b>3. </b>Các bài blogs đã dịch
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/vi/3-blogstranslated/3.1-blog1/ title="Blog 1" class=dd-item><a href=../../../vi/3-blogstranslated/3.1-blog1/><b>3.1. </b>Blog 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/3-blogstranslated/3.2-blog2/ title="Blog 2" class=dd-item><a href=../../../vi/3-blogstranslated/3.2-blog2/><b>3.2. </b>Blog 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/3-blogstranslated/3.3-blog3/ title="Blog 3" class=dd-item><a href=../../../vi/3-blogstranslated/3.3-blog3/><b>3.3. </b>Blog 3
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/vi/4-eventparticipated/ title="Các events đã tham gia" class=dd-item><a href=../../../vi/4-eventparticipated/><b>4. </b>Các events đã tham gia
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/vi/4-eventparticipated/4.1-event1/ title="Sự kiện 1" class=dd-item><a href=../../../vi/4-eventparticipated/4.1-event1/><b>4.1. </b>Sự kiện 1
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/4-eventparticipated/4.2-event2/ title="Sự kiện 2" class=dd-item><a href=../../../vi/4-eventparticipated/4.2-event2/><b>4.2. </b>Sự kiện 2
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/4-eventparticipated/4.3-event3/ title="Sự kiện 3" class=dd-item><a href=../../../vi/4-eventparticipated/4.3-event3/><b>4.3. </b>Sự kiện 3
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/4-eventparticipated/4.4-event4/ title="Sự kiện 4" class=dd-item><a href=../../../vi/4-eventparticipated/4.4-event4/><b>4.4. </b>Sự kiện 4
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/4-eventparticipated/4.5-event5/ title="Sự kiện 5" class=dd-item><a href=../../../vi/4-eventparticipated/4.5-event5/><b>4.5. </b>Sự kiện 5
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/vi/5-workshop/ title=Workshop class="dd-item
+parent"><a href=../../../vi/5-workshop/><b>5. </b>Workshop
+<i class="fas fa-check read-icon"></i></a><ul><li data-nav-id=/vi/5-workshop/5.1-workshop-overview/ title="Tổng quan Workshop" class=dd-item><a href=../../../vi/5-workshop/5.1-workshop-overview/><b>5.1. </b>Tổng quan Workshop
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.2-setup-environment/ title="Cài đặt môi trường" class=dd-item><a href=../../../vi/5-workshop/5.2-setup-environment/><b>5.2. </b>Cài đặt môi trường
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.3-cdk-bootstrap/ title="CDK Bootstrap" class=dd-item><a href=../../../vi/5-workshop/5.3-cdk-bootstrap/><b>5.3. </b>CDK Bootstrap
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.4-configure-stacks/ title="Cấu hình Infrastructure Stacks" class=dd-item><a href=../../../vi/5-workshop/5.4-configure-stacks/><b>5.4. </b>Cấu hình Infrastructure Stacks
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.5-deploy-infrastructure/ title="Deploy Infrastructure" class=dd-item><a href=../../../vi/5-workshop/5.5-deploy-infrastructure/><b>5.5. </b>Deploy Infrastructure
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.6-configure-api-lambda/ title="Cấu hình API & Lambda" class=dd-item><a href=../../../vi/5-workshop/5.6-configure-api-lambda/><b>5.6. </b>Cấu hình API & Lambda
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.7-deploy-backend/ title="Deploy Backend Services" class=dd-item><a href=../../../vi/5-workshop/5.7-deploy-backend/><b>5.7. </b>Deploy Backend Services
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.8-test-endpoints/ title="Test Endpoints End-to-End" class=dd-item><a href=../../../vi/5-workshop/5.8-test-endpoints/><b>5.8. </b>Test Endpoints End-to-End
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.9-push-gitlab/ title="Push lên GitLab" class="dd-item
+active"><a href=../../../vi/5-workshop/5.9-push-gitlab/><b>5.9. </b>Push lên GitLab
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.10-deploy-amplify/ title="Deploy lên Amplify" class=dd-item><a href=../../../vi/5-workshop/5.10-deploy-amplify/><b>5.10. </b>Deploy lên Amplify
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/5-workshop/5.11-cleanup/ title="Dọn dẹp" class=dd-item><a href=../../../vi/5-workshop/5.11-cleanup/><b>5.11. </b>Dọn dẹp
+<i class="fas fa-check read-icon"></i></a></li></ul></li><li data-nav-id=/vi/6-self-evaluation/ title="Tự đánh giá" class=dd-item><a href=../../../vi/6-self-evaluation/><b>6. </b>Tự đánh giá
+<i class="fas fa-check read-icon"></i></a></li><li data-nav-id=/vi/7-feedback/ title="Chia sẻ, đóng góp ý kiến" class=dd-item><a href=../../../vi/7-feedback/><b>7. </b>Chia sẻ, đóng góp ý kiến
+<i class="fas fa-check read-icon"></i></a></li></ul><section id=shortcuts><h3>More</h3><ul><li><a class=padding href=https://www.facebook.com/groups/awsstudygroupfcj/><i class='fab fa-facebook'></i> AWS Study Group</a></li></ul></section><section id=prefooter><hr><ul><li><a class=padding><i class="fas fa-language fa-fw"></i><div class=select-style><select id=select-language onchange="location=this.value"><option id=en value=https://hviethub.github.io/Internship-Report/5-workshop/5.9-push-gitlab/>English</option><option id=vi value=https://hviethub.github.io/Internship-Report/vi/5-workshop/5.9-push-gitlab/ selected>Tiếng Việt</option></select><svg id="Capa_1" xmlns:xlink="http://www.w3.org/1999/xlink" width="255" height="255" viewBox="0 0 255 255" style="enable-background:new 0 0 255 255"><g><g id="arrow-drop-down"><polygon points="0,63.75 127.5,191.25 255,63.75"/></g></g></svg></div></a></li><li><a class=padding href=# data-clear-history-toggle><i class="fas fa-history fa-fw"></i> Clear History</a></li></ul></section><section id=footer><left><b>Workshop</b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7920860&style=0038&nbdigits=9&type=page&initCount=0" title=Migrate alt="web counter" border=0></a><br><b><a href=https://cloudjourney.awsstudygroup.com/>Cloud Journey</a></b><br><img src="https://hitwebcounter.com/counter/counter.php?page=7830807&style=0038&nbdigits=9&type=page&initCount=0" title="Total CLoud Journey" alt="web counter" border=0>
+</left><left><br><br><b>Last Updated</b><br><i><span id=lastUpdated style=color:orange></span>
+</i><script>const today=new Date,formattedDate=today.toLocaleDateString("en-GB");document.getElementById("lastUpdated").textContent=formattedDate</script></left><left><br><br><b>Team</b><br><i><a href=https://www.facebook.com/groups/660548818043427 style=color:orange>First Cloud Journey</a><br></i></left><script async defer src=https://buttons.github.io/buttons.js></script></section></div></nav><section id=body><div id=overlay></div><div class="padding highlightable"><div><div id=top-bar><div id=breadcrumbs itemscope itemtype=http://data-vocabulary.org/Breadcrumb><span id=sidebar-toggle-span><a href=# id=sidebar-toggle data-sidebar-toggle><i class="fas fa-bars"></i>
+</a></span><span id=toc-menu><i class="fas fa-list-alt"></i></span>
+<span class=links><a href=../../../vi/>Báo cáo thực tập</a> > <a href=../../../vi/5-workshop/>Workshop</a> > Push lên GitLab</span></div><div class=progress><div class=wrapper><nav id=TableOfContents><ul><li><ul><li></li></ul></li></ul></nav></div></div></div></div><div id=head-tags></div><div id=body-inner><h1>Push lên GitLab</h1><h4 id=tổng-quan>Tổng quan</h4><p>Sau khi test thành công, bạn sẽ push code lên GitLab để version control và chuẩn bị cho CI/CD.</p><h4 id=bước-1-khởi-tạo-git-repository>Bước 1: Khởi tạo Git Repository</h4><p><strong>1. Kiểm tra trạng thái Git</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Di chuyển đến project root</span>
+</span></span><span style=display:flex><span>cd /path/to/everyonecook-dev
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Kiểm tra xem Git đã được khởi tạo chưa</span>
+</span></span><span style=display:flex><span>git status
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Nếu chưa khởi tạo:</span>
+</span></span><span style=display:flex><span>git init
+</span></span></code></pre></div><p><strong>2. Cấu hình Git</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Đặt tên và email của bạn</span>
+</span></span><span style=display:flex><span>git config user.name <span style=color:#e6db74>&#34;Tên của bạn&#34;</span>
+</span></span><span style=display:flex><span>git config user.email <span style=color:#e6db74>&#34;email.cua.ban@example.com&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Xác minh cấu hình</span>
+</span></span><span style=display:flex><span>git config --list
+</span></span></code></pre></div><h4 id=bước-2-tạo-gitignore>Bước 2: Tạo .gitignore</h4><p><strong>1. Tạo file .gitignore</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Tạo .gitignore</span>
+</span></span><span style=display:flex><span>cat &gt; .gitignore <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Dependencies
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>node_modules/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>package-lock.json
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>yarn.lock
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Build outputs
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>dist/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>build/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.js.map
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.d.ts.map
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>cdk.out/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.next/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Biến môi trường
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.env
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.env.local
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.env.*.local
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># AWS
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.pem
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.key
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>cloudfront-private-key.pem
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Deployment packages
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.zip
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>deployment/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Logs
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>logs/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.log
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>npm-debug.log*
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>yarn-debug.log*
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>yarn-error.log*
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># IDE
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.vscode/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.idea/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.swp
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.swo
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*~
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># OS
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.DS_Store
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>Thumbs.db
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Test coverage
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>coverage/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>.nyc_output/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Temporary files
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>tmp/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>temp/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.tmp
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># CDK
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>cdk.context.json
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>outputs.json
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># TypeScript
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>*.tsbuildinfo
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span></code></pre></div><p><img alt="Gitignore đã tạo" src=../../../images/5-Workshop/5.9-push-gitlab/gitignore.png>
+<em>Ảnh chụp: Nội dung file .gitignore</em></p><h4 id=bước-3-stage-và-commit-files>Bước 3: Stage và Commit Files</h4><p><strong>1. Thêm Files vào Staging</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Thêm tất cả files</span>
+</span></span><span style=display:flex><span>git add .
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Kiểm tra những gì sẽ được commit</span>
+</span></span><span style=display:flex><span>git status
+</span></span></code></pre></div><p><strong>2. Tạo Initial Commit</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Commit với message</span>
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;Initial commit: EveryoneCook infrastructure và backend&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Xác minh commit</span>
+</span></span><span style=display:flex><span>git log --oneline
+</span></span></code></pre></div><p><img alt="Initial Commit" src=../../../images/5-Workshop/5.9-push-gitlab/initial-commit.png>
+<em>Ảnh chụp: Terminal hiển thị initial commit</em></p><h4 id=bước-4-tạo-gitlab-repository>Bước 4: Tạo GitLab Repository</h4><p><strong>1. Đăng nhập GitLab</strong></p><p>Truy cập <a href=https://gitlab.com/>https://gitlab.com/</a> và đăng nhập</p><p><strong>2. Tạo Project mới</strong></p><ol><li>Nhấn &ldquo;New project&rdquo;</li><li>Chọn &ldquo;Create blank project&rdquo;</li><li>Tên project: <code>everyonecook</code></li><li>Visibility: Private (khuyến nghị)</li><li>Initialize with README: No (chúng ta đã có code)</li><li>Nhấn &ldquo;Create project&rdquo;</li></ol><p><img alt="GitLab Project đã tạo" src=../../../images/5-Workshop/5.9-push-gitlab/gitlab-project.png>
+<em>Ảnh chụp: GitLab hiển thị project mới đã tạo</em></p><p><strong>3. Lấy Repository URL</strong></p><pre tabindex=0><code># HTTPS URL
+https://gitlab.com/your-username/everyonecook.git
+
+# SSH URL (nếu bạn đã cấu hình SSH key)
+git@gitlab.com:your-username/everyonecook.git
+</code></pre><h4 id=bước-5-thêm-remote-và-push>Bước 5: Thêm Remote và Push</h4><p><strong>1. Thêm GitLab Remote</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Thêm remote (sử dụng HTTPS)</span>
+</span></span><span style=display:flex><span>git remote add origin https://gitlab.com/your-username/everyonecook.git
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Hoặc sử dụng SSH</span>
+</span></span><span style=display:flex><span>git remote add origin git@gitlab.com:your-username/everyonecook.git
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Xác minh remote</span>
+</span></span><span style=display:flex><span>git remote -v
+</span></span></code></pre></div><p><strong>2. Push lên GitLab</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Push lên branch main</span>
+</span></span><span style=display:flex><span>git push -u origin main
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Nhập thông tin đăng nhập GitLab nếu sử dụng HTTPS</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Username: your-username</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Password: your-personal-access-token (không phải password!)</span>
+</span></span></code></pre></div><p><img alt="Git Push" src=../../../images/5-Workshop/5.9-push-gitlab/git-push.png>
+<em>Ảnh chụp: Terminal hiển thị push thành công lên GitLab</em></p><p><strong>3. Xác minh trên GitLab</strong></p><p>Truy cập GitLab repository của bạn và xác minh files đã được upload.</p><p><img alt="GitLab Repository" src=../../../images/5-Workshop/5.9-push-gitlab/gitlab-repo.png>
+<em>Ảnh chụp: GitLab hiển thị repository với files</em></p><h4 id=bước-6-tạo-cấu-trúc-branch>Bước 6: Tạo cấu trúc Branch</h4><p><strong>1. Tạo Development Branch</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Tạo và chuyển sang dev branch</span>
+</span></span><span style=display:flex><span>git checkout -b dev
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Push dev branch</span>
+</span></span><span style=display:flex><span>git push -u origin dev
+</span></span></code></pre></div><p><strong>2. Tạo Feature Branch</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Tạo feature branch từ dev</span>
+</span></span><span style=display:flex><span>git checkout -b feature/add-notifications
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Thực hiện thay đổi...</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Commit thay đổi...</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Push feature branch</span>
+</span></span><span style=display:flex><span>git push -u origin feature/add-notifications
+</span></span></code></pre></div><p><strong>3. Chiến lược Branch</strong></p><pre tabindex=0><code>main (production)
+  ↓
+dev (development)
+  ↓
+feature/* (features)
+hotfix/* (urgent fixes)
+</code></pre><h4 id=bước-7-cấu-hình-gitlab-cicd>Bước 7: Cấu hình GitLab CI/CD</h4><p><strong>1. Tạo .gitlab-ci.yml</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Tạo cấu hình CI/CD</span>
+</span></span><span style=display:flex><span>cat &gt; .gitlab-ci.yml <span style=color:#e6db74>&lt;&lt; &#39;EOF&#39;
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>image: node:20
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>stages:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  - test
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  - build
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  - deploy
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>variables:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  AWS_DEFAULT_REGION: us-east-1
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Cache node_modules
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>cache:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  paths:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - node_modules/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - infrastructure/node_modules/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - services/*/node_modules/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Test stage
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>test:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  stage: test
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  script:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - npm install
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - npm run lint
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - npm run test
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  only:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - merge_requests
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - dev
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - main
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Build stage
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>build:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  stage: build
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  script:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - npm install
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - npm run build
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - cd infrastructure &amp;&amp; npm run build
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  artifacts:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    paths:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      - infrastructure/cdk.out/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>      - services/*/dist/
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    expire_in: 1 hour
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  only:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - dev
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - main
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Deploy lên dev
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>deploy:dev:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  stage: deploy
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  script:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - npm install -g aws-cdk
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - cd infrastructure
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - npx cdk deploy --all --require-approval never --context environment=dev
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  environment:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    name: development
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    url: https://api.everyonecook.cloud
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  only:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - dev
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  when: manual
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>
+</span></span></span><span style=display:flex><span><span style=color:#e6db74># Deploy lên production
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>deploy:prod:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  stage: deploy
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  script:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - npm install -g aws-cdk
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - cd infrastructure
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - npx cdk deploy --all --require-approval never --context environment=prod
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  environment:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    name: production
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    url: https://api.everyonecook.cloud
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  only:
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>    - main
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>  when: manual
+</span></span></span><span style=display:flex><span><span style=color:#e6db74>EOF</span>
+</span></span></code></pre></div><p><strong>2. Commit cấu hình CI/CD</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Thêm và commit</span>
+</span></span><span style=display:flex><span>git add .gitlab-ci.yml
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;Thêm cấu hình GitLab CI/CD&#34;</span>
+</span></span><span style=display:flex><span>git push
+</span></span></code></pre></div><p><img alt="GitLab CI/CD" src=../../../images/5-Workshop/5.9-push-gitlab/gitlab-cicd.png>
+<em>Ảnh chụp: GitLab hiển thị CI/CD pipeline</em></p><h4 id=bước-8-cấu-hình-gitlab-variables>Bước 8: Cấu hình GitLab Variables</h4><p><strong>1. Thêm AWS Credentials</strong></p><ol><li>Vào GitLab → Settings → CI/CD → Variables</li><li>Thêm variables:<ul><li><code>AWS_ACCESS_KEY_ID</code>: AWS access key của bạn</li><li><code>AWS_SECRET_ACCESS_KEY</code>: AWS secret key của bạn (masked)</li><li><code>AWS_DEFAULT_REGION</code>: us-east-1</li></ul></li></ol><p><img alt="GitLab Variables" src=../../../images/5-Workshop/5.9-push-gitlab/gitlab-variables.png>
+<em>Ảnh chụp: Cấu hình GitLab CI/CD variables</em></p><p><strong>2. Thêm biến môi trường khác</strong></p><p>Thêm các biến môi trường khác:</p><ul><li><code>DOMAIN_NAME</code>: everyonecook.cloud</li><li><code>ENABLE_OPENSEARCH</code>: false</li><li>etc.</li></ul><h4 id=bước-9-thiết-lập-branch-protection>Bước 9: Thiết lập Branch Protection</h4><p><strong>1. Bảo vệ Main Branch</strong></p><ol><li>Vào Settings → Repository → Protected branches</li><li>Chọn branch <code>main</code></li><li>Allowed to merge: Maintainers</li><li>Allowed to push: No one</li><li>Require approval: Yes (1 approval)</li></ol><p><strong>2. Bảo vệ Dev Branch</strong></p><ol><li>Chọn branch <code>dev</code></li><li>Allowed to merge: Developers + Maintainers</li><li>Allowed to push: Developers + Maintainers</li></ol><h4 id=bước-10-tạo-merge-request-workflow>Bước 10: Tạo Merge Request Workflow</h4><p><strong>1. Tạo Feature Branch</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Tạo feature branch</span>
+</span></span><span style=display:flex><span>git checkout dev
+</span></span><span style=display:flex><span>git pull
+</span></span><span style=display:flex><span>git checkout -b feature/new-feature
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Thực hiện thay đổi</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># ...</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Commit thay đổi</span>
+</span></span><span style=display:flex><span>git add .
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;Thêm tính năng mới&#34;</span>
+</span></span><span style=display:flex><span>git push -u origin feature/new-feature
+</span></span></code></pre></div><p><strong>2. Tạo Merge Request</strong></p><ol><li>Vào GitLab → Merge requests → New merge request</li><li>Source branch: feature/new-feature</li><li>Target branch: dev</li><li>Title: &ldquo;Thêm tính năng mới&rdquo;</li><li>Description: Mô tả thay đổi</li><li>Assign to reviewer</li><li>Create merge request</li></ol><p><strong>3. Review và Merge</strong></p><ol><li>Reviewer review code</li><li>CI/CD pipeline chạy tests</li><li>Nếu tests pass và được approve, merge vào dev</li><li>Xóa feature branch</li></ol><h4 id=bước-11-tag-releases>Bước 11: Tag Releases</h4><p><strong>1. Tạo Release Tag</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Sau khi merge vào main</span>
+</span></span><span style=display:flex><span>git checkout main
+</span></span><span style=display:flex><span>git pull
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Tạo tag</span>
+</span></span><span style=display:flex><span>git tag -a v1.0.0 -m <span style=color:#e6db74>&#34;Release version 1.0.0&#34;</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Push tag</span>
+</span></span><span style=display:flex><span>git push origin v1.0.0
+</span></span></code></pre></div><p><strong>2. Tạo Release trên GitLab</strong></p><ol><li>Vào Repository → Tags</li><li>Tìm tag của bạn</li><li>Nhấn &ldquo;Create release&rdquo;</li><li>Thêm release notes</li><li>Publish release</li></ol><h4 id=tóm-tắt-git-workflow>Tóm tắt Git Workflow</h4><pre tabindex=0><code>1. Tạo feature branch từ dev
+   git checkout -b feature/new-feature
+
+2. Thực hiện thay đổi và commit
+   git add .
+   git commit -m &#34;Mô tả&#34;
+
+3. Push lên GitLab
+   git push -u origin feature/new-feature
+
+4. Tạo merge request trên GitLab
+   feature/new-feature → dev
+
+5. Review, test, và merge
+
+6. Deploy lên môi trường dev
+   (trigger thủ công trong GitLab CI/CD)
+
+7. Test trong môi trường dev
+
+8. Merge dev → main cho production
+
+9. Deploy lên production
+   (trigger thủ công trong GitLab CI/CD)
+
+10. Tag release
+    git tag -a v1.0.0 -m &#34;Release&#34;
+</code></pre><h4 id=best-practices>Best Practices</h4><p><strong>Commit Messages:</strong></p><pre tabindex=0><code>feat: Thêm xác thực người dùng
+fix: Sửa lỗi đăng nhập
+docs: Cập nhật README
+style: Format code
+refactor: Refactor user service
+test: Thêm unit tests
+chore: Cập nhật dependencies
+</code></pre><p><strong>Đặt tên Branch:</strong></p><pre tabindex=0><code>feature/add-notifications
+bugfix/fix-login-error
+hotfix/critical-security-patch
+release/v1.0.0
+</code></pre><h4 id=xử-lý-sự-cố>Xử lý sự cố</h4><p><strong>Vấn đề: Xác thực thất bại</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Sử dụng personal access token thay vì password</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Tạo token: GitLab → Settings → Access Tokens</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Sử dụng token làm password khi push</span>
+</span></span></code></pre></div><p><strong>Vấn đề: Files lớn bị từ chối</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Kiểm tra kích thước file</span>
+</span></span><span style=display:flex><span>git ls-files -z | xargs -0 du -h | sort -h
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Xóa files lớn khỏi history</span>
+</span></span><span style=display:flex><span>git filter-branch --tree-filter <span style=color:#e6db74>&#39;rm -f large-file.zip&#39;</span> HEAD
+</span></span></code></pre></div><p><strong>Vấn đề: Merge conflicts</strong></p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#75715e># Cập nhật branch của bạn</span>
+</span></span><span style=display:flex><span>git checkout feature/your-feature
+</span></span><span style=display:flex><span>git fetch origin
+</span></span><span style=display:flex><span>git merge origin/dev
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Giải quyết conflicts trong files</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># Sau đó commit</span>
+</span></span><span style=display:flex><span>git add .
+</span></span><span style=display:flex><span>git commit -m <span style=color:#e6db74>&#34;Giải quyết merge conflicts&#34;</span>
+</span></span><span style=display:flex><span>git push
+</span></span></code></pre></div><h4 id=bước-tiếp-theo>Bước tiếp theo</h4><p>Sau khi code đã push lên GitLab, tiến hành <a href=../../../vi/5-workshop/5.10-deploy-amplify/>Deploy lên Amplify</a> để deploy ứng dụng frontend của bạn.</p><footer class=footline></footer></div></div><div id=navigation><a class="nav nav-prev" href=../../../vi/5-workshop/5.8-test-endpoints/ title="Test Endpoints End-to-End"><i class="fa fa-chevron-left"></i></a>
+<a class="nav nav-next" href=../../../vi/5-workshop/5.10-deploy-amplify/ title="Deploy lên Amplify" style=margin-right:0><i class="fa fa-chevron-right"></i></a></div></section><div style=left:-1000px;overflow:scroll;position:absolute;top:-1000px;border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px><div style=border:none;box-sizing:content-box;height:200px;margin:0;padding:0;width:200px></div></div><script src=../../../js/clipboard.min.js?1765683798></script><script src=../../../js/perfect-scrollbar.min.js?1765683798></script><script src=../../../js/perfect-scrollbar.jquery.min.js?1765683798></script><script src=../../../js/jquery.sticky.js?1765683798></script><script src=../../../js/featherlight.min.js?1765683798></script><script src=../../../js/highlight.pack.js?1765683798></script><script>hljs.initHighlightingOnLoad()</script><script src=../../../js/modernizr.custom-3.6.0.js?1765683798></script><script src=../../../js/learn.js?1765683798></script><script src=../../../js/hugo-learn.js?1765683798></script><link href=../../../mermaid/mermaid.css?1765683798 rel=stylesheet><script src=../../../mermaid/mermaid.js?1765683798></script><script>mermaid.initialize({startOnLoad:!0})</script><script>(function(e,t,n,s,o,i,a){e.GoogleAnalyticsObject=o,(e[o]=e[o]||function(){(e[o].q=e[o].q||[]).push(arguments)},e[o].l=1*new Date),(i=t.createElement(n),a=t.getElementsByTagName(n)[0]),i.async=1,i.src=s,a.parentNode.insertBefore(i,a)})(window,document,"script","https://www.google-analytics.com/analytics.js","ga"),ga("create","UA-158079754-2","auto"),ga("send","pageview")</script></body></html>
