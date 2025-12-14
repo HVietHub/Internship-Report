@@ -12,7 +12,7 @@ pre: " <b> 4.2. </b> "
 
 ### Event Information
 
-**Date:** Monday, November 17, 2024  
+**Date:** Monday, November 17, 2025  
 **Time:** 8:30 AM – 12:00 PM (Morning Session)  
 **Location:** Bitexco Financial Tower, HCMC  
 **Speakers:** Truong Quan Tinh, Kha Van, Bao,Thinh  

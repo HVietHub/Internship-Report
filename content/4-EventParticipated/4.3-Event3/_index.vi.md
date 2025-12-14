@@ -10,7 +10,7 @@ pre: " <b> 4.3. </b> "
 
 ### Thông Tin Sự Kiện
 
-**Ngày:** Thứ Sáu, 3 tháng 10, 2024  
+**Ngày:** Thứ Sáu, 3 tháng 10, 2025  
 **Thời gian:** 2:00 PM – 4:30 PM  
 **Địa điểm:** AWS Event Hall, Tầng 26 Tòa nhà Bitexco, TP.HCM  
 **Diễn giả:** Toàn Huỳnh, My Nguyễn  

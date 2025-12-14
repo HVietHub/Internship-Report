@@ -10,7 +10,7 @@ pre: " <b> 4.4. </b> "
 
 ### Thông Tin Sự Kiện
 
-**Ngày:** Thứ Năm, 16 tháng 10, 2024  
+**Ngày:** Thứ Năm, 16 tháng 10, 2025  
 **Thời gian:** 9:30 AM – 11:45 AM  
 **Địa điểm:** Hall Academic – Trường Đại học FPT  
 **Diễn giả:** Văn Hoàng Kha, Bạch Doãn Vương  

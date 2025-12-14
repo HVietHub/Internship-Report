@@ -11,7 +11,7 @@ draft: false
 
 ### Event Information
 
-**Date:** Friday, October 3, 2024  
+**Date:** Friday, October 3, 2025  
 **Time:** 2:00 PM – 4:30 PM  
 **Location:** AWS Event Hall, L26 Bitexco Tower, HCMC  
 **Speakers:** Toan Huynh, My Nguyen  

@@ -25,7 +25,7 @@ Trong quá trình thực tập, em đã tham gia 5 events, với mỗi event là
 ### [Event 2](4.2-Event2/)
 &emsp;**Tên sự kiện:** DevOps on AWS
 
-&emsp;**Thời gian:** 8:30 AM – 12:00 PM, Thứ Hai, 17 tháng 11, 2024
+&emsp;**Thời gian:** 8:30 AM – 12:00 PM, Thứ Hai, 17 tháng 11, 2025
 
 &emsp;**Địa điểm:** Tòa nhà Bitexco Financial Tower, TP.HCM
 
@@ -36,7 +36,7 @@ Trong quá trình thực tập, em đã tham gia 5 events, với mỗi event là
 ### [Event 3](4.3-Event3/)
 &emsp;**Tên sự kiện:** Chu Trình Phát Triển Hỗ Trợ AI
 
-&emsp;**Thời gian:** 2:00 PM – 4:30 PM, Thứ Sáu, 3 tháng 10, 2024
+&emsp;**Thời gian:** 2:00 PM – 4:30 PM, Thứ Sáu, 3 tháng 10, 2025
 
 &emsp;**Địa điểm:** AWS Event Hall, Tầng 26 Tòa nhà Bitexco, TP.HCM
 
@@ -47,7 +47,7 @@ Trong quá trình thực tập, em đã tham gia 5 events, với mỗi event là
 ### [Event 4](4.4-Event4/)
 &emsp;**Tên sự kiện:** Data Science On AWS
 
-&emsp;**Thời gian:** 9:30 AM – 11:45 AM, Thứ Năm, 16 tháng 10, 2024
+&emsp;**Thời gian:** 9:30 AM – 11:45 AM, Thứ Năm, 16 tháng 10, 2025
 
 &emsp;**Địa điểm:** Hall Academic – Trường Đại học FPT
 

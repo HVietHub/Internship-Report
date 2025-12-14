@@ -25,7 +25,7 @@ During my internship, I participated in five events. Each one was a memorable ex
 ### [Event 2](4.2-Event2/)  
 &emsp;**Event Name:** DevOps on AWS  
 
-&emsp;**Date & Time:** 8:30 AM – 12:00 PM, Monday, November 17, 2024  
+&emsp;**Date & Time:** 8:30 AM – 12:00 PM, Monday, November 17, 2025  
 
 &emsp;**Location:** Bitexco Financial Tower, HCMC  
 
@@ -36,7 +36,7 @@ During my internship, I participated in five events. Each one was a memorable ex
 ### [Event 3](4.3-Event3/)  
 &emsp;**Event Name:** AI-Driven Development Life Cycle  
 
-&emsp;**Date & Time:** 2:00 PM – 4:30 PM, Friday, October 3, 2024  
+&emsp;**Date & Time:** 2:00 PM – 4:30 PM, Friday, October 3, 2025  
 
 &emsp;**Location:** AWS Event Hall, L26 Bitexco Tower, HCMC  
 
@@ -47,7 +47,7 @@ During my internship, I participated in five events. Each one was a memorable ex
 ### [Event 4](4.4-Event4/)  
 &emsp;**Event Name:** Data Science On AWS  
 
-&emsp;**Date & Time:** 9:30 AM – 11:45 AM, Thursday, October 16, 2024  
+&emsp;**Date & Time:** 9:30 AM – 11:45 AM, Thursday, October 16, 2025  
 
 &emsp;**Location:** Hall Academic – FPT University  
 

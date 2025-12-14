@@ -10,7 +10,7 @@ pre: " <b> 4.4. </b> "
 
 ### Event Information
 
-**Date:** Thursday, October 16, 2024  
+**Date:** Thursday, October 16, 2025  
 **Time:** 9:30 AM – 11:45 AM  
 **Location:** Hall Academic – FPT University  
 **Speakers:** Van Hoang Kha, Bach Doan Vuong  

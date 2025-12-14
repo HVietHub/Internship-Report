@@ -11,7 +11,7 @@ pre: " <b> 4.2. </b> "
 
 ### Thông Tin Sự Kiện
 
-**Ngày:** Thứ Hai, 17 tháng 11, 2024  
+**Ngày:** Thứ Hai, 17 tháng 11, 2025  
 **Thời gian:** 8:30 AM – 12:00 PM (Buổi sáng)  
 **Địa điểm:** Tòa nhà Bitexco Financial Tower, TP.HCM  
 **Diễn giả:** Trương Quan Tỉnh, Khả Vân, Bảo, Thịnh  
